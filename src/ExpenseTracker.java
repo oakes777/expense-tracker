@@ -27,4 +27,26 @@ public class ExpenseTracker {
         //Add the amount to the list of expenses for that date
         expenses.get(category).get(date).add(amount);
     }
+
+    //Prints all expenses
+    public void printAllExpenses() {
+        //for loop runs through keys (expense categories) in map expenses
+        for (String category : expenses.keySet()) {
+            //prints out the expense categories
+            System.out.println("Expenses for " + category + ":");
+            //entrySet is a method of HashMap class; entrySet returns
+            //the set view of the key/value pairs in the map as a
+            //Map.Entry object
+            for (Map.Entry<String, List<Double>> entry : expenses.get(category).entrySet()) {
+                //entry.getKey() will be the inner map key (expense date)
+                //entry.getValue() will be the inner map value (list
+                //of expenditures made on that date)
+                //S-out prints out the dates and expenditures for
+                //each category
+                System.out.println("Date: " + entry.getKey() + ", Amounts: " + entry.getValue());
+            }
+        }
+    }
+
+
 }
