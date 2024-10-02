@@ -48,5 +48,22 @@ public class ExpenseTracker {
         }
     }
 
+    public static void main(String[] args) {
 
+        //initialize new ExpenseTracker 'tracker'
+        ExpenseTracker tracker = new ExpenseTracker();
+
+        //add keys/values to test addExpense method
+        tracker.addExpense("Food", "2024-09-01", 12.75);
+        tracker.addExpense("Food", "2024-09-01", 29.50);
+        tracker.addExpense("Food", "2024-09-17", 18.95);
+        tracker.addExpense("Food", "2024-09-22", 75.00);
+        tracker.addExpense("Entertainment", "2024-09-01", 27.50);
+        tracker.addExpense("Entertainment", "2024-09-01", 30.85);
+        tracker.addExpense("Entertainment", "2024-09-08", 18.25);
+        tracker.addExpense("Entertainment", "2024-09-30", 27.50);
+
+        //test printAllExpenses method
+        tracker.printAllExpenses();
+    }
 }
